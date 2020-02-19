@@ -45,6 +45,8 @@ bool
 test_framework_getenv_bool (const char *name);
 int64_t
 test_framework_getenv_int64 (const char *name, int64_t default_value);
+bool
+test_framework_setenv (const char *name, const char *value);
 char *
 test_framework_get_host (void);
 uint16_t
@@ -207,5 +209,11 @@ test_framework_skip_if_no_client_side_encryption (void);
 
 void
 test_framework_resolve_path (const char *path, char *resolved);
+
+int
+test_framework_skip_if_no_aws (void);
+
+int
+test_framework_skip_if_no_setenv (void);
 
 #endif
